@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./style.css";
 
 const GetSeason = function (month, lat) {
   if (lat > 0) {
@@ -11,9 +12,24 @@ const GetSeason = function (month, lat) {
 
 export const DisplaySeason = function (props) {
   const month = new Date().getMonth();
-  return (
-    <div>
-      <div>{GetSeason(month, props.lat)}</div>
-    </div>
-  );
+  const natija = GetSeason(month, props.lat);
+  if (natija == "Qish") {
+    return (
+      <div className="snow">
+        <i className="snowflake icon" id="icon1"></i>
+        <h1 className="title">Burr,it's chilly!</h1>
+        {/* {GetSeason(month, props.lat)} */}
+        <i className="snowflake icon" id="icon1"></i>
+      </div>
+    );
+  } else {
+    return (
+      <div className="sun12">
+        <i className="sun icon" id="icon2"></i>
+        <h1 className="title1">Let's hit the beach!</h1>
+        {/* {GetSeason(month, props.lat)} */}
+        <i className="sun icon" id="icon2"></i>
+      </div>
+    );
+  }
 };

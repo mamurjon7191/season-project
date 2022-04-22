@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.snow {
+  /* border: 2px solid rgba(60, 3, 231, 0.38); */
+  background-image: url(../public/download-1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 10rem;
+  display: flex;
+  gap: 5rem;
+}
+.sun12 {
+  /* border: 2px solid rgba(204, 231, 3, 0.38); */
+  background-image: url(../public/download.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 10rem;
+  display: flex;
+  gap: 5rem;
+}
+.snowflake {
+}
+#icon1 {
+  color: blue;
+  font-size: 5rem;
+}
+#icon2 {
+  color: rgb(0, 255, 55);
+  font-size: 5rem;
+}
+.title {
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(2px);
+  padding: 1rem;
+  color: blue;
+}
+.title1 {
+  color: rgb(0, 0, 0);
+  backdrop-filter: blur(2px);
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+}

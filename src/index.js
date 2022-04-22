@@ -21,14 +21,17 @@ class App extends React.Component {
       }
     );
   }
+
   render() {
-    return (
-      <div>
-        {/* <div>Latitude:{this.state.lat}</div>
-        <div>Error:{this.state.err}</div> */}
-        <DisplaySeason lat={this.state.lat} err={this.state.err} />
-      </div>
-    );
+    if (this.state.err) {
+      return <div className="error">Iltimos Internetingizni tekshiring</div>;
+    } else if (this.state.lat) {
+      return (
+        <div>
+          <DisplaySeason lat={this.state.lat} err={this.state.err} />
+        </div>
+      );
+    }
   }
 }
 ReactDOM.render(<App />, document.querySelector("#root"));
